@@ -1,3 +1,6 @@
+---
+output: html_document
+---
 # Coursera Getting and Cleaning Data Project ReadMe File
 
 The ReadMe contains a short description of how to run the code what the code does and how the code works.
@@ -14,29 +17,29 @@ The output is a file named "data_tidy.txt" which is written to the working direc
 
 The script (run_analysis.R) is broken into the five basic steps outlined in the project assignment:
 
-1. Merge the training and the test sets to create one data set.
+Step 1. Merge the training and the test sets to create one data set.
 
 For the test data set, read in the files for subject ids, the raw data and activities and then combine the three data frames into a single test data frame.
 
-For the traiing data set, read in the files for subject ids, the raw data and activities and then combine the three data frames into a single training data frame.
+For the training data set, read in the files for subject ids, the raw data and activities and then combine the three data frames into a single training data frame.
 
 Combine the two data frames into a single data frame for all data.
 
-2. Extract only the measurements on the mean and standard deviation for each measurement.
+Step 2. Extract only the measurements on the mean and standard deviation for each measurement.
 
 Determine the correct columns based on the names in the features.txt file.
 
 The showing mean(), std(), and meanFreq were determined to be the columns of interest.  Use grep() to identify those columns and then subset them out along with the column indicating the subject for each data row and the column indicating the activity for each data row.
 
-3. Use descriptive activity names to name the activities in the data set.
+Step 3. Use descriptive activity names to name the activities in the data set.
 
 Use gsub() to rename each activity label from a numeric index to a descriptive character string as shown in the activity labels file.
 
-4. Appropriately labels the data set with descriptive variable names.
+Step 4. Appropriately labels the data set with descriptive variable names.
 
 Extract the feature/variable names of interest.  Use a series of gsub() statements to clean up the names with the goal of making them more readable and legal R variable names.
 
-5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
+Step 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Create a matrix to hold all of the average values.  Use nested loops to calculate and store the average value for each measurement of each activity for each subject.
 
